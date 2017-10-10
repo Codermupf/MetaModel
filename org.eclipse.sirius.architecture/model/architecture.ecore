@@ -9,8 +9,8 @@
         upperBound="-1" eType="#//InterFace"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependance" upperBound="-1"
         eType="#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
-        eType="#//function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" upperBound="-1"
+        eType="#//Class" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -26,20 +26,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portOfSystem" upperBound="-1"
         eType="#//Port" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="portOfFunction" upperBound="-1"
-        eType="#//function" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterFace">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="realizeNeedComponent" upperBound="-1"
         eType="#//Component"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="function">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="class" upperBound="-1"
-        eType="#//Class" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="inPort" eSuperTypes="#//Port">
     <eStructuralFeatures xsi:type="ecore:EReference" name="realizeRequiredPortOfInterface"
