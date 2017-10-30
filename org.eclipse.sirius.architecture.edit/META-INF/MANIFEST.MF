@@ -4,12 +4,13 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.sirius.architecture.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.sample.architecture.provider.ArchitectureEditPlugin$Implementation
+Bundle-Activator: org.eclipse.sample.architectureTool.provider.ArchitectureEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.sample.architecture.System.provider,
- org.eclipse.sample.architecture.provider
+ org.eclipse.sample.architecture.provider,
+ org.eclipse.sample.architectureTool.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.sirius.architecture;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

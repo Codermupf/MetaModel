@@ -10,7 +10,7 @@
       <!-- @generated architecture -->
       <package
             uri="http://www.example.org/architecture"
-            class="org.eclipse.sample.architecture.ArchitecturePackage"
+            class="org.eclipse.sample.architectureTool.ArchitecturePackage"
             genModel="model/architecture.genmodel"/>
    </extension>
 

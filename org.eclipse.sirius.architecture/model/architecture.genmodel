@@ -10,37 +10,59 @@
     <genClasses ecoreClass="architecture.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Component/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/portOfComponent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/realizeProvideComponent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/dependance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/componentDependence"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/class"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/componentOfComponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/interfaceOfComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Component/ComponentDependence"/>
     </genClasses>
     <genClasses ecoreClass="architecture.ecore#//Class">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Class/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Class/Association"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Class/InterfaceAbstract"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Class/Generalization"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Class/composition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Class/Aggregation"/>
     </genClasses>
     <genClasses ecoreClass="architecture.ecore#//System">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//System/subSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//System/SystemDependence"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//System/componentOfSystem"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//System/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//System/portOfSystem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//System/System"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//System/interfaceOfSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//System/ComponentDependence"/>
     </genClasses>
     <genClasses ecoreClass="architecture.ecore#//Port">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//outPort/realizeProvidePortOfInterface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Port/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Port/simple"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Port/providedRealize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Port/portDependence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Port/provided"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Port/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Port/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Port/requiredRealize"/>
     </genClasses>
-    <genClasses ecoreClass="architecture.ecore#//InterFace">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//InterFace/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//InterFace/realizeNeedComponent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//InterFace/Property"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//InterFace/operation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//inPort/realizeRequiredPortOfInterface"/>
+    <genClasses ecoreClass="architecture.ecore#//Interface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Interface/providedRealize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Interface/InterfaceRealize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Interface/InterfaceDependence"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//Interface/requiredRealize"/>
     </genClasses>
-    <genClasses ecoreClass="architecture.ecore#//inPort">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//inPort/realizeRequiredPortOfInterface"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//inPort/realizeRequiredPortOfClass"/>
+    <genClasses ecoreClass="architecture.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Attribute/Visable"/>
     </genClasses>
-    <genClasses ecoreClass="architecture.ecore#//outPort">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//outPort/realizeProvidePortOfInterface"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference architecture.ecore#//outPort/realizeProvidePortOfClass"/>
+    <genClasses ecoreClass="architecture.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Method/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Method/returnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Method/visable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//Method/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="architecture.ecore#//classMember">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//classMember/attribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference architecture.ecore#//classMember/method"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute architecture.ecore#//classMember/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

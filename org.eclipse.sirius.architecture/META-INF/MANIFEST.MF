@@ -12,7 +12,10 @@ Export-Package: org.eclipse.sample.architecture,
  org.eclipse.sample.architecture.System.impl,
  org.eclipse.sample.architecture.System.util,
  org.eclipse.sample.architecture.impl,
- org.eclipse.sample.architecture.util
+ org.eclipse.sample.architecture.util,
+ org.eclipse.sample.architectureTool,
+ org.eclipse.sample.architectureTool.impl,
+ org.eclipse.sample.architectureTool.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

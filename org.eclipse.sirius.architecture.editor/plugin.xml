@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="org.eclipse.sample.architecture.presentation.ArchitectureModelWizardID"
+            id="org.eclipse.sample.architectureTool.presentation.ArchitectureModelWizardID"
             name="%_UI_ArchitectureModelWizard_label"
-            class="org.eclipse.sample.architecture.presentation.ArchitectureModelWizard"
+            class="org.eclipse.sample.architectureTool.presentation.ArchitectureModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/ArchitectureModelFile.gif">
          <description>%_UI_ArchitectureModelWizard_description</description>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated architecture -->
       <editor
-            id="org.eclipse.sample.architecture.presentation.ArchitectureEditorID"
+            id="org.eclipse.sample.architectureTool.presentation.ArchitectureEditorID"
             name="%_UI_ArchitectureEditor_label"
             icon="icons/full/obj16/ArchitectureModelFile.gif"
             extensions="architecture"
-            class="org.eclipse.sample.architecture.presentation.ArchitectureEditor"
-            contributorClass="org.eclipse.sample.architecture.presentation.ArchitectureActionBarContributor">
+            class="org.eclipse.sample.architectureTool.presentation.ArchitectureEditor"
+            contributorClass="org.eclipse.sample.architectureTool.presentation.ArchitectureActionBarContributor">
       </editor>
    </extension>
-
 </plugin>
